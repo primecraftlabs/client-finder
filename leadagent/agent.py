@@ -91,7 +91,7 @@ Write the message in {config.MESSAGE_LANGUAGE}. Rules:
 - Under 80 words. Friendly and respectful; it must sound like a real person, not an advert.
 - Mention their good reviews and ONE specific problem from the list, and how fixing it can bring them more customers.
 - Offer to make a free sample design for their business, with no obligation.
-- End with one simple yes/no question, then sign off as {config.YOUR_NAME}.
+- End with one simple yes/no question, then sign off as "{config.SIGNATURE}".
 - Be honest: do not invent facts, past clients, statistics, discounts or deadlines. Do not mention prices.
 - Last line: they can simply reply "no" and you won't message again.
 
