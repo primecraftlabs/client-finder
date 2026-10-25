@@ -27,6 +27,8 @@ OLLAMA_URL = _get("OLLAMA_URL", "http://localhost:11434")
 YOUR_NAME = _get("YOUR_NAME", "Your Name")
 BUSINESS_NAME = _get("BUSINESS_NAME")
 SIGNATURE = f"{YOUR_NAME}, {BUSINESS_NAME}" if BUSINESS_NAME else YOUR_NAME
+# How the AI describes who it writes for: a studio (speaks as "we") or a freelancer.
+WHO = f"{YOUR_NAME} from {BUSINESS_NAME}, a web and app development studio" if BUSINESS_NAME else f"{YOUR_NAME}, a freelance web developer"
 YOUR_PORTFOLIO = _get("YOUR_PORTFOLIO")
 YOUR_SERVICES = _get("YOUR_SERVICES", "business websites")
 PRICE_GUIDE = _get("PRICE_GUIDE")

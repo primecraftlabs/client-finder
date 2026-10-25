@@ -75,7 +75,7 @@ def draft_pitch(brain, lead: dict) -> dict:
         else "No portfolio link yet - do not mention one."
     )
     problems = "\n".join(f"  - {p}" for p in lead["site_issues"]) or "  - none found"
-    prompt = f"""You are helping {config.YOUR_NAME}, a freelance web developer, write a first WhatsApp message to a local business owner.
+    prompt = f"""You are helping {config.WHO}, write a first WhatsApp message to a local business owner. Speak for the studio ("we") where it fits.
 
 About {config.YOUR_NAME}: offers {config.YOUR_SERVICES}. {portfolio}
 
@@ -105,7 +105,7 @@ def draft_reply(brain, lead: dict, conversation: list[dict]) -> str:
         f"{config.YOUR_NAME if m['direction'] == 'out' else 'Client'}: {m['text']}" for m in conversation
     )
     prices = config.PRICE_GUIDE or "No prices given. If the client asks about price, write [PRICE] for the developer to fill in."
-    prompt = f"""You are helping {config.YOUR_NAME}, a freelance web developer ({config.YOUR_SERVICES}), reply on WhatsApp to the owner of {lead['name']} ({lead['category']} in {lead['city']}).
+    prompt = f"""You are helping {config.WHO} ({config.YOUR_SERVICES}), reply on WhatsApp to the owner of {lead['name']} ({lead['category']} in {lead['city']}). Speak for the studio ("we") where it fits.
 
 Conversation so far:
 {history}
